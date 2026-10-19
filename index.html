@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arshdeep Kaur</title>
+    <meta
+      name="description"
+      content="Portfolio website for Arshdeep Kaur — graphic designer, visual storyteller, and digital creative."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #edebdd;
+        --panel: #f5f0e6;
+        --paper: rgba(255, 255, 255, 0.24);
+        --ink: #1a1a1a;
+        --muted: rgba(26, 26, 26, 0.8);
+        --dark: #2b2b2b;
+        --soft: #a59d8d;
+        --line: rgba(26, 26, 26, 0.18);
+        --shadow: rgba(26, 26, 26, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Cormorant Garamond", "Times New Roman", serif;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 26px;
+      }
+
+      .topnav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        padding: 18px 30px 16px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-top: 0;
+        flex-wrap: wrap;
+      }
+
+      .topnav a {
+        position: relative;
+        transition: opacity 0.2s ease;
+      }
+
+      .topnav a:hover {
+        opacity: 0.7;
+      }
+
+      .page-shell {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 26px 26px 50px;
+      }
+
+      .section {
+        background: rgba(255, 255, 255, 0.07);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        margin: 8px 0 22px;
+        padding: 16px 0 0;
+      }
+
+      .section-header,
+      .section-footer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 16px;
+        padding: 0 18px 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.74rem;
+        color: var(--ink);
+      }
+
+      .section-header {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section-header > *:nth-child(2),
+      .section-footer > *:nth-child(2) {
+        text-align: center;
+      }
+
+      .section-header > *:last-child,
+      .section-footer > *:last-child {
+        text-align: right;
+      }
+
+      .section-footer {
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+        padding-bottom: 18px;
+        margin-top: 18px;
+      }
+
+      .script-heading {
+        font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+        font-size: clamp(2.6rem, 4vw, 4.2rem);
+        font-weight: 700;
+        line-height: 0.96;
+        letter-spacing: 0.03em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .content-wrap {
+        padding: 34px 18px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+
+      .title-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+      }
+
+      .cover-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+        align-items: center;
+        gap: 40px;
+        padding: 30px 18px 0;
+      }
+
+      .cover-copy {
+        max-width: 100%;
+      }
+
+      .cover-title {
+        margin: 0;
+        font-size: clamp(3.2rem, 7vw, 7rem);
+        line-height: 0.85;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+        text-transform: none;
+        word-break: normal;
+        white-space: normal;
+        overflow: visible;
+      }
+
+      .cover-name {
+        margin-top: 18px;
+        font-size: clamp(1.4rem, 2vw, 2.2rem);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .cover-blurb {
+        max-width: 560px;
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
+        text-transform: none;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 24px;
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        font-size: 0.7rem;
+        font-weight: 600;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      }
+
+      .button.primary {
+        background: var(--dark);
+        border-color: var(--dark);
+        color: #fff;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .job-content .button.secondary {
+        justify-self: start;
+        min-height: 48px;
+        padding: 0 24px;
+        font-size: 0.7rem;
+        letter-spacing: 0.13em;
+        border-radius: 999px;
+        margin-top: 4px;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 22px rgba(26, 26, 26, 0.12);
+      }
+
+      .portrait-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 520px;
+        gap: 16px;
+      }
+
+      .portrait-arch {
+        position: relative;
+        width: min(100%, 400px);
+        height: 520px;
+        border-radius: 50% 50% 0 0 / 42% 42% 0 0;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(0,0,0,0.1));
+        border: 1px solid rgba(26, 26, 26, 0.2);
+        box-shadow: 0 30px 48px rgba(26, 26, 26, 0.08);
+        cursor: pointer;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .portrait-arch:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 34px 52px rgba(26, 26, 26, 0.12);
+      }
+
+      .portrait-arch img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%) contrast(1.12);
+      }
+
+      .portrait-arch::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.14));
+      }
+
+      .who-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 38px;
+        align-items: center;
+        padding: 38px 18px 0;
+      }
+
+      .bio-card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .bio-copy {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 2;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-align: justify;
+      }
+
+      .stat-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 8px;
+      }
+
+      .stat {
+        min-width: 130px;
+        border-left: 1px solid var(--line);
+        padding-left: 16px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+      }
+
+      .subheading {
+        margin: 0;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .skills-layout {
+        position: relative;
+        padding: 30px 18px 20px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 28px 20px;
+        align-items: start;
+        margin-top: 14px;
+      }
+
+      .skill-category {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 20px;
+        min-height: 220px;
+      }
+
+      .skill-category h3 {
+        margin: 0 0 18px;
+        font-size: 1.15rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(26, 26, 26, 0.26);
+        background: rgba(26, 26, 26, 0.03);
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .timeline {
+        padding: 28px 18px 4px;
+      }
+
+      .timeline-list {
+        display: grid;
+        gap: 22px;
+      }
+
+      .job-item {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 24px;
+        padding: 18px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .job-item:first-child {
+        border-top: none;
+      }
+
+      .job-date {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-top: 6px;
+      }
+
+      .job-content {
+        display: grid;
+        gap: 8px;
+      }
+
+      .job-role {
+        margin: 0;
+        font-size: clamp(1.2rem, 2vw, 1.8rem);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .job-company {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .job-content ul {
+        margin: 8px 0 0;
+        padding-left: 20px;
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.9;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        gap: 28px;
+        padding: 30px 18px 4px;
+      }
+
+      .project-card {
+        background: rgba(255,255,255,0.14);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 30px rgba(26, 26, 26, 0.07);
+      }
+
+      .project-image {
+        height: 220px;
+        background: linear-gradient(135deg, #d7d1c5, #8f867a);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .project-image::before {
+        content: "";
+        position: absolute;
+        inset: 16px;
+        border: 1px solid rgba(255,255,255,0.5);
+        border-radius: 14px;
+        pointer-events: none;
+      }
+
+      .project-image.one { background: linear-gradient(135deg, #bfc2b0, #6b7367); }
+      .project-image.two { background: linear-gradient(135deg, #d7c3b7, #8d7565); }
+      .project-image.three { background: linear-gradient(135deg, #c4c1d4, #5a5e72); }
+      .project-image.four { background: linear-gradient(135deg, #d9d3bf, #8d8068); }
+
+      .project-content {
+        padding: 18px 20px 20px;
+      }
+
+      .project-content h3 {
+        margin: 0 0 10px;
+        font-size: 1.12rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .project-content p {
+        margin: 0;
+        font-size: 0.74rem;
+        line-height: 1.9;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .tools {
+        margin-top: 16px;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink);
+      }
+
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        padding: 30px 18px 4px;
+      }
+
+      .edu-list,
+      .service-list,
+      .testimonials-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .info-box,
+      .service-box,
+      .quote {
+        background: rgba(255,255,255,0.12);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 20px;
+      }
+
+      .info-box h3,
+      .service-box h3,
+      .quote h3 {
+        margin: 0 0 8px;
+        font-size: 0.8rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .info-box p,
+      .service-box p,
+      .quote p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.74rem;
+        line-height: 1.9;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .service-box {
+        min-height: 150px;
+      }
+
+      .certifications {
+        padding: 24px 18px 0;
+      }
+
+      .certifications h3 {
+        margin: 0 0 10px;
+        font-size: 0.8rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .certifications p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.74rem;
+        line-height: 1.9;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .quote {
+        position: relative;
+        padding-top: 24px;
+      }
+
+      .quote::before {
+        content: "“";
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 2.7rem;
+        font-family: "Allura", cursive;
+        color: rgba(26,26,26,0.2);
+      }
+
+      .quote p {
+        padding-left: 10px;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 28px;
+        align-items: center;
+        padding: 30px 18px 0;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .contact-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 10px;
+      }
+
+      .contact-item span {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .contact-item a {
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .contact-panel {
+        padding: 26px 24px;
+        border-radius: 18px;
+        background: var(--dark);
+        color: white;
+        box-shadow: 0 20px 35px rgba(26, 26, 26, 0.12);
+      }
+
+      .contact-panel h3 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .contact-panel p {
+        margin: 18px 0 0;
+        color: rgba(255,255,255,0.75);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        line-height: 1.9;
+      }
+
+      .brand-mark {
+        font-family: "Allura", cursive;
+        font-size: 3.2rem;
+        line-height: 1;
+      }
+
+      @media (max-width: 900px) {
+        .cover-grid,
+        .who-grid,
+        .contact-grid,
+        .two-column,
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, minmax(180px, 1fr));
+        }
+      }
+
+      @media (max-width: 620px) {
+        .cover-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .portrait-wrap {
+          order: -1;
+        }
+
+        .page-shell {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+
+        .section-header,
+        .section-footer {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 8px;
+          letter-spacing: 0.18em;
+        }
+
+        .section-header > *:last-child,
+        .section-footer > *:last-child,
+        .section-header > *:nth-child(2),
+        .section-footer > *:nth-child(2) {
+          text-align: center;
+        }
+
+        .job-item {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cover-blurb,
+        .bio-copy,
+        .job-content ul,
+        .project-content p,
+        .info-box p,
+        .service-box p,
+        .quote p,
+        .contact-item a,
+        .contact-panel p {
+          letter-spacing: 0.06em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#cover">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="page-shell">
+      <section class="section" id="cover">
+        <div class="cover-grid">
+          <div class="cover-copy">
+            <p class="eyebrow">Full Stack Developer</p>
+            <div class="title-block">
+              <h2 class="script-heading">Hello, I’m</h2>
+              <h1 class="cover-title">
+                Arshdeep<br />
+                Kaur
+              </h1>
+            </div>
+            <!-- EDIT SUMMARY HERE -->
+            <p class="cover-blurb">
+              I’m a Full Stack Developer passionate about building modern, responsive, and user-friendly web applications that solve real-world problems. I work with the MERN stack (MongoDB, Express.js, React.js, and Node.js) to develop complete web solutions, from intuitive user interfaces to robust backend APIs. I also explore AI integration to build smarter and more useful applications. With hands-on project experience, I enjoy learning new technologies, solving problems, and turning ideas into functional digital products. My goal is to create impactful applications with clean code, thoughtful design, and a seamless user experience.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="https://drive.google.com/uc?export=download&id=1SmxLR6cA-Wvx8cpi-lF9jg8zwCCCPkt0" target="_blank" rel="noreferrer">Download Resume</a>
+              <a class="button secondary" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="portrait-wrap">
+            <div class="portrait-arch">
+              <img
+                id="profileImage"
+                src="myprofile.jpeg"
+                alt="Portrait of Arshdeep Kaur"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="content-wrap">
+          <div class="section-title">
+            <h2 class="script-heading">Skills</h2>
+            <p class="subheading">What I bring to the table</p>
+          </div>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <div class="skill-list">
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">React.js</span>
+                <span class="skill-pill">Tailwind CSS</span>
+                <span class="skill-pill">Bootstrap</span>
+                <span class="skill-pill">Responsive UI</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Backend</h3>
+              <div class="skill-list">
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">Express.js</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">REST APIs</span>
+                <span class="skill-pill">JWT</span>
+                <span class="skill-pill">Authentication</span>
+                <span class="skill-pill">Database Design</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Tools</h3>
+              <div class="skill-list">
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">VS Code</span>
+                <span class="skill-pill">Postman</span>
+                <span class="skill-pill">Figma</span>
+                <span class="skill-pill">Firebase</span>
+                <span class="skill-pill">NPM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="content-wrap">
+          <div class="section-title">
+            <h2 class="script-heading">Experience</h2>
+            <p class="subheading">Career journey</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-list">
+            <article class="job-item">
+              <div class="job-date">Mar'26 — Aug'26</div>
+              <div class="job-content">
+                <h3 class="job-role">Full Stack Developer Intern</h3>
+                <p class="job-company">Zigguratts</p>
+                <ul>
+                  <li>Built and improved web application features using modern frontend and backend technologies.</li>
+                  <li>Worked on API integration, database connectivity, and application troubleshooting to improve functionality.</li>
+                  <li>Collaborated with the development team to deliver smooth user experiences and project updates.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="job-item">
+              <div class="job-date">Jan'28 — Mar'28</div>
+              <div class="job-content">
+                <h3 class="job-role">Frontend Developer Intern</h3>
+                <p class="job-company">BrainyPAI</p>
+                <ul>
+                  <li>Developed responsive interfaces using React.js and modern CSS practices for better UX.</li>
+                  <li>Worked with reusable components, state management, and Firebase-based integrations.</li>
+                  <li>Improved consistency and usability across key application screens and flows.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section" id="projects">
+        <div class="content-wrap">
+          <div class="section-title">
+            <h2 class="script-heading">Projects</h2>
+            <p class="subheading">Selected work samples</p>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <a href="https://finaleventsync-frontend.onrender.com/" target="_blank" rel="noreferrer" aria-label="Visit EventSync project">
+              <div class="project-image one">
+                <img src="event.png" alt="EventSync project preview" />
+              </div>
+            </a>
+            <div class="project-content">
+              <h3>EventSync</h3>
+              <p>Full Stack Event Management System built for students and admins to manage registrations and event workflows.</p>
+              <div class="tools">React.js · Node.js · Express.js · MongoDB · Tailwind CSS</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a href="https://track-expense-frontend.onrender.com/" target="_blank" rel="noreferrer" aria-label="Visit Track Expense project">
+              <div class="project-image two">
+                <img src="expense.png" alt="Track Expense project preview" />
+              </div>
+            </a>
+            <div class="project-content">
+              <h3>Track Expense</h3>
+              <p>AI-integrated expense tracker that monitors budgets, income, savings goals, and financial insights.</p>
+              <div class="tools">React.js · Node.js · Express.js · MongoDB · Chart.js · Groq API</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a href="https://jazzy-meringue-9e76ea.netlify.app/" target="_blank" rel="noreferrer" aria-label="Visit Countries Data Explorer project">
+              <div class="project-image three">
+                <img src="countries.png" alt="Countries Data Explorer project preview" />
+              </div>
+            </a>
+            <div class="project-content">
+              <h3>Countries Data Explorer</h3>
+              <p>Interactive frontend application that visualizes country data with search, filters, and charts.</p>
+              <div class="tools">HTML5 · CSS3 · JavaScript · REST API · Chart.js</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <a href="https://github.com/arsh-code-ux/FinalKagazSetu.git" target="_blank" rel="noreferrer" aria-label="Visit KaagazSetu repository">
+              <div class="project-image four">
+                <img src="kagazSetu.png" alt="KaagazSetu project preview" />
+              </div>
+            </a>
+            <div class="project-content">
+              <h3>KaagazSetu</h3>
+              <p>KaagazSetu – Full-Stack Web Application | Repository</p>
+              <p>Developed a secure digital platform for document storage, nominee management, and personal record tracking.</p>
+              <p>Implemented authentication, encrypted file uploads, AI-powered insights, and a dashboard for efficient data management.</p>
+              <div class="tools">React.js · Node.js · Express.js · MongoDB · JWT · AI API · Groq API · Chart.js</div>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+      <section class="section" id="services">
+        <div class="content-wrap">
+          <div class="section-title">
+            <h2 class="script-heading">Certifications</h2>
+            <p class="subheading">What I have earned</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-list">
+            <article class="job-item">
+              <div class="job-date">Google Cloud</div>
+              <div class="job-content">
+                <h3 class="job-role">Introduction to Git and GitHub</h3>
+                <p class="job-company">Google Cloud Skills Boost</p>
+                <ul>
+                  <li>Learned Git basics, repository flow, branching, commits, and collaborative workflows.</li>
+                  <li>Built practical understanding of using Git and GitHub in real development projects.</li>
+                </ul>
+                <a class="button secondary" href="https://www.cloudskillsboost.google/" target="_blank" rel="noreferrer">View Certificate</a>
+              </div>
+            </article>
+
+            <article class="job-item">
+              <div class="job-date">Meta</div>
+              <div class="job-content">
+                <h3 class="job-role">Version Control</h3>
+                <p class="job-company">Coursera — Meta</p>
+                <ul>
+                  <li>Covered version control fundamentals such as commits, merges, pull requests, and Git history.</li>
+                  <li>Practiced collaborative development workflows used by modern software teams.</li>
+                </ul>
+                <a class="button secondary" href="https://www.coursera.org/learn/version-control" target="_blank" rel="noreferrer">View Certificate</a>
+              </div>
+            </article>
+
+            <article class="job-item">
+              <div class="job-date">Vanderbilt</div>
+              <div class="job-content">
+                <h3 class="job-role">Prompt Engineering for ChatGPT</h3>
+                <p class="job-company">Vanderbilt University</p>
+                <ul>
+                  <li>Focused on writing effective prompts to get better results from AI tools.</li>
+                  <li>Applied structured prompting to improve productivity, automation, and problem-solving.</li>
+                </ul>
+                <a class="button secondary" href="https://www.coursera.org/learn/prompt-engineering" target="_blank" rel="noreferrer">View Certificate</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="contact-grid">
+          <div>
+            <div class="section-title">
+              <h2 class="script-heading">Contact</h2>
+              <p class="subheading">Let’s build something memorable</p>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:arshdeepkaur63531@gmail.com">arshdeepkaur63531@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span>Phone</span>
+                <a href="tel:+919877501751">+91 98775 01751</a>
+              </div>
+              <div class="contact-item">
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/arshdeep-kaur-290286324/" target="_blank" rel="noreferrer">linkedin.com/in/arshdeep-kaur-290286324</a>
+              </div>
+              <div class="contact-item">
+                <span>GitHub</span>
+                <a href="https://github.com/arsh-code-ux" target="_blank" rel="noreferrer">github.com/arsh-code-ux</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-panel">
+            <div class="brand-mark">Arshdeep</div>
+            <h3>Let’s work together</h3>
+            <p>
+              Whether you need a refined brand identity, eye-catching social content, or a design system that helps your business grow, I’d love to hear about your next idea.
+            </p>
+            <div class="cta-row" style="margin-top: 22px;">
+              <a class="button primary" href="mailto:arshdeepkaur63531@gmail.com">Contact Me</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+  </body>
+</html>
